@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "968910155256",
+    "project_id": "fir-app-cf4b0",
+    "storage_bucket": "fir-app-cf4b0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968910155256:android:23e34e26e28525347b7a0d",
+        "android_client_info": {
+          "package_name": "com.example.tuna_asis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwTSCmwO-k6KFkr58DTon3-wkQgb0sgUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
