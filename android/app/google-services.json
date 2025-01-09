@@ -12,7 +12,12 @@
           "package_name": "com.example.tuna_asis"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "968910155256-aj509djc4nsbn9kdlmig4vkfmv605sqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBwTSCmwO-k6KFkr58DTon3-wkQgb0sgUg"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968910155256-aj509djc4nsbn9kdlmig4vkfmv605sqs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "968910155256-fdl61i7jik4smqqvvrigl6nlg7n7k4i2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tunaAsis"
+              }
+            }
+          ]
         }
       }
     }

@@ -12,6 +12,7 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: Colors.white,
       body: Container(
         child: Column(
@@ -24,7 +25,7 @@ class _SignupState extends State<Signup> {
               ),
             ),
             SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20.0),
@@ -147,7 +148,7 @@ class _SignupState extends State<Signup> {
                   fontWeight: FontWeight.w500),
             ),
             SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -170,7 +171,7 @@ class _SignupState extends State<Signup> {
               ],
             ),
             SizedBox(
-              height: 40.0,
+              height: 20.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

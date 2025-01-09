@@ -12,6 +12,7 @@ class _SigninState extends State<Signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: Colors.white,
       body: Container(
         child: Column(
@@ -124,7 +125,7 @@ class _SigninState extends State<Signin> {
                       fontWeight: FontWeight.w500)),
             ),
             SizedBox(
-              height: 40.0,
+              height: 30.0,
             ),
             Text(
               "or LogIn with",
@@ -134,7 +135,7 @@ class _SigninState extends State<Signin> {
                   fontWeight: FontWeight.w500),
             ),
             SizedBox(
-              height: 30.0,
+              height: 20.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -167,7 +168,7 @@ class _SigninState extends State<Signin> {
               ],
             ),
             SizedBox(
-              height: 40.0,
+              height: 30.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
