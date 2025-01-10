@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tuna_asis/pages/auth/forgotpassword.dart';
+import 'package:tuna_asis/pages/auth/number/number.dart';
 import 'package:tuna_asis/pages/auth/tryslicingsignup.dart';
 import 'package:tuna_asis/pages/home/home.dart';
 // import 'package:tuna_asis/services/authenticate.dart';
@@ -243,6 +244,24 @@ class _SlicingSigninState extends State<SlicingSignin> {
                         width: 45,
                         fit: BoxFit.cover,
                       ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Number(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.phone_android,
+                          color: Colors.blueAccent,
+                          size: 45,
+                        ),
+                      )
                     ],
                   ),
                   SizedBox(

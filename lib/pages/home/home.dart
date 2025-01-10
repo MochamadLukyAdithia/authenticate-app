@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tuna_asis/pages/auth/signin.dart';
-import 'package:tuna_asis/pages/auth/signup.dart';
-import 'package:tuna_asis/pages/auth/tryslicingsignin.dart';
-import 'package:tuna_asis/pages/auth/tryslicingsignup.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -11,49 +7,75 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
-  Color colors = Colors.black;
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  static const _kTabPage = <Widget>[
+    Center(
+      child: Icon(Icons.home, size: 64, color: Colors.redAccent),
+    ),
+    Center(
+      child: Icon(Icons.camera, size: 64, color: Colors.redAccent),
+    ),
+    Center(
+      child: Icon(Icons.settings, size: 64, color: Colors.redAccent),
+    ),
+  ];
+
+  static const _kTabs = <Widget>[
+    Tab(
+      icon: Icon(
+        Icons.home,
+        color: Colors.redAccent,
+      ),
+      text: 'Home',
+    ),
+    Tab(
+      icon: Icon(
+        Icons.camera,
+        color: Colors.redAccent,
+      ),
+      text: 'Camera',
+    ),
+    Tab(
+      icon: Icon(
+        Icons.settings,
+        color: Colors.redAccent,
+      ),
+      text: 'Settings',
+    ),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(
+      length: _kTabPage.length,
+      vsync: this,
+    );
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            child: Text("Home"),
-          ),
-        ],
+      appBar: AppBar(),
+      backgroundColor: Colors.amberAccent.shade400,
+      body: TabBarView(
+        controller: _tabController,
+        children: _kTabPage,
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            child: IconButton(
-              color: colors,
-              icon: Icon(Icons.home),
-              onPressed: () {
-                setState(() {
-                  colors = Colors.redAccent;
-                });
-              },
-            ),
-          ),
-          Container(
-            child: IconButton(
-              icon: Icon(Icons.camera),
-              onPressed: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()));
-              },
-            ),
-          ),
-          Container(
-            child: IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()));
-              },
-            ),
-          ),
-        ],
+      bottomNavigationBar: Material(
+        color: Colors.amberAccent.shade700,
+        child: TabBar(
+          tabs: _kTabs,
+          controller: _tabController,
+        ),
       ),
     );
   }
