@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tuna_asis/pages/auth/forgotpassword.dart';
 import 'package:tuna_asis/pages/auth/tryslicingsignup.dart';
 import 'package:tuna_asis/pages/home/home.dart';
-import 'package:tuna_asis/services/authenticate.dart';
+// import 'package:tuna_asis/services/authenticate.dart';
 
 class SlicingSignin extends StatefulWidget {
   const SlicingSignin({super.key});
