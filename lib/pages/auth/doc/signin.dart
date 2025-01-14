@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tuna_asis/pages/auth/signin.dart';
+import 'signup.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class Signin extends StatefulWidget {
+  const Signin({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Signin> createState() => _SigninState();
 }
 
-class _SignupState extends State<Signup> {
+class _SigninState extends State<Signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,14 +18,13 @@ class _SignupState extends State<Signup> {
         child: Column(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
-              child: Image.asset(
-                "assets/images/car.PNG",
-                fit: BoxFit.cover,
-              ),
-            ),
+                width: MediaQuery.of(context).size.width,
+                child: Image.asset(
+                  "assets/images/car.PNG",
+                  fit: BoxFit.cover,
+                )),
             SizedBox(
-              height: 20.0,
+              height: 30.0,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20.0),
@@ -42,31 +41,7 @@ class _SignupState extends State<Signup> {
                       child: TextFormField(
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Please Enter Name';
-                          }
-                          return null;
-                        },
-                        // controller: namecontroller,
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Name",
-                            hintStyle: TextStyle(
-                                color: Color(0xFFb2b7bf), fontSize: 18.0)),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 30.0,
-                    ),
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 2.0, horizontal: 30.0),
-                      decoration: BoxDecoration(
-                          color: Color(0xFFedf0f8),
-                          borderRadius: BorderRadius.circular(30)),
-                      child: TextFormField(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please Enter Email';
+                            return 'Please Enter E-mail';
                           }
                           return null;
                         },
@@ -88,13 +63,13 @@ class _SignupState extends State<Signup> {
                           color: Color(0xFFedf0f8),
                           borderRadius: BorderRadius.circular(30)),
                       child: TextFormField(
+                        // controller: passwordcontroller,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Please Enter Password';
                           }
                           return null;
                         },
-                        // controller: passwordcontroller,
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Password",
@@ -110,12 +85,11 @@ class _SignupState extends State<Signup> {
                       onTap: () {
                         // if(_formkey.currentState!.validate()){
                         //   setState(() {
-                        //     email=mailcontroller.text;
-                        //     name= namecontroller.text;
+                        //     email= mailcontroller.text;
                         //     password=passwordcontroller.text;
                         //   });
                         // }
-                        // registration();
+                        // userLogin();
                       },
                       child: Container(
                           width: MediaQuery.of(context).size.width,
@@ -126,7 +100,7 @@ class _SignupState extends State<Signup> {
                               borderRadius: BorderRadius.circular(30)),
                           child: Center(
                               child: Text(
-                            "Sign Up",
+                            "Sign In",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 22.0,
@@ -138,7 +112,20 @@ class _SignupState extends State<Signup> {
               ),
             ),
             SizedBox(
-              height: 40.0,
+              height: 20.0,
+            ),
+            GestureDetector(
+              onTap: () {
+                // Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPassword()));
+              },
+              child: Text("Forgot Password?",
+                  style: TextStyle(
+                      color: Color(0xFF8c8e98),
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w500)),
+            ),
+            SizedBox(
+              height: 30.0,
             ),
             Text(
               "or LogIn with",
@@ -153,30 +140,40 @@ class _SignupState extends State<Signup> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  "assets/images/google.png",
-                  height: 45,
-                  width: 45,
-                  fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {
+                    // AuthMethods().signInWithGoogle(context);
+                  },
+                  child: Image.asset(
+                    "assets/images/google.png",
+                    height: 45,
+                    width: 45,
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 SizedBox(
                   width: 30.0,
                 ),
-                Image.asset(
-                  "assets/images/apple1.png",
-                  height: 50,
-                  width: 50,
-                  fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {
+                    // AuthMethods().signInWithApple();
+                  },
+                  child: Image.asset(
+                    "assets/images/apple1.png",
+                    height: 50,
+                    width: 50,
+                    fit: BoxFit.cover,
+                  ),
                 )
               ],
             ),
             SizedBox(
-              height: 20.0,
+              height: 30.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an account?",
+                Text("Don't have an account?",
                     style: TextStyle(
                         color: Color(0xFF8c8e98),
                         fontSize: 18.0,
@@ -189,12 +186,12 @@ class _SignupState extends State<Signup> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Signin(),
+                        builder: (context) => Signup(),
                       ),
                     );
                   },
                   child: Text(
-                    "LogIn",
+                    "SignUp",
                     style: TextStyle(
                         color: Color(0xFF273671),
                         fontSize: 20.0,

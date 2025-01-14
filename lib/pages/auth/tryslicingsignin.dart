@@ -85,7 +85,7 @@ class _SlicingSigninState extends State<SlicingSignin> {
         children: [
           Container(
             child: Image.asset(
-              'assets/images/tuna.jpg',
+              'assets/images/tuna-bg.png',
               fit: BoxFit.cover,
             ),
           ),
