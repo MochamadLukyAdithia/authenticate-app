@@ -83,7 +83,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tuna_asis/pages/belajar/belajar_screen.dart';
+import 'package:tuna_asis/pages/belajar/layouts/belajar_screen.dart';
 import 'package:tuna_asis/pages/home/layouts/home_screen.dart';
 import 'package:tuna_asis/utils/constants.dart';
 
