@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tuna_asis/pages/home/layouts/all_items.dart';
 import 'package:tuna_asis/pages/home/widgets/banner.dart';
-import 'package:tuna_asis/pages/home/widgets/features_display.dart';
+import 'package:tuna_asis/pages/home/widgets/lessons_display.dart';
 import 'package:tuna_asis/pages/home/widgets/my_button.dart';
 import 'package:tuna_asis/utils/constants.dart';
 
@@ -68,7 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AllItems(),
+                              ),
+                            );
+                          },
                           child: Text(
                             "Lihat Semua",
                             style: TextStyle(
@@ -90,6 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     return Padding(
                       padding: EdgeInsets.only(top: 5, left: 15),
                       child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
                         child: Row(
                             children: recipes.map(
                           (e) {
