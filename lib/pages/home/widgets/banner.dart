@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:tuna_asis/pages/home/layouts/ai_screen.dart';
 
 class BannerToExplore extends StatelessWidget {
   const BannerToExplore({super.key});
@@ -38,7 +39,16 @@ class BannerToExplore extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 33),
                       backgroundColor: Colors.white,
                       elevation: 0),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return AiScreen();
+                        },
+                      ),
+                    );
+                  },
                   child: Text(
                     "Telusuri",
                     style: TextStyle(

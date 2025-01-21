@@ -100,11 +100,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
-                            children: recipes.map(
-                          (e) {
-                            return ItemDisplay(documentSnapshot: e);
-                          },
-                        ).toList()),
+                          children: recipes.map(
+                            (e) {
+                              return ItemDisplay(documentSnapshot: e);
+                            },
+                          ).toList(),
+                        ),
                       ),
                     );
                   }
