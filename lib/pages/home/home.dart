@@ -84,6 +84,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tuna_asis/pages/belajar/layouts/belajar_screen.dart';
+import 'package:tuna_asis/pages/camera/layouts/camera_screen.dart';
 import 'package:tuna_asis/pages/favorite/layouts/favorite_screen.dart';
 import 'package:tuna_asis/pages/home/layouts/all_items.dart';
 import 'package:tuna_asis/pages/home/layouts/home_screen.dart';
@@ -106,7 +107,7 @@ class _HomeState extends State<Home> {
     page = [
       HomeScreen(),
       BelajarScreen(),
-      navBarPage(Iconsax.camera5),
+      CameraScreen(),
       FavoriteScreen(),
       navBarPage(Iconsax.profile_2user5),
     ];
@@ -158,7 +159,7 @@ class _HomeState extends State<Home> {
             icon: Icon(
               selectedindex == 2 ? Iconsax.camera5 : Iconsax.camera,
             ),
-            label: "Camera",
+            label: "AR",
           ),
           BottomNavigationBarItem(
             icon: Icon(

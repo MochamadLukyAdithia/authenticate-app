@@ -23,7 +23,7 @@ class BannerToExplore extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Temukan semua yang\nkamu butuhkan",
+                  "Temukan semua yang\nkamu ingin tau",
                   style: TextStyle(
                     height: 1.1,
                     fontSize: 22,
@@ -32,7 +32,7 @@ class BannerToExplore extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -50,7 +50,7 @@ class BannerToExplore extends StatelessWidget {
                     );
                   },
                   child: Text(
-                    "Telusuri",
+                    "Tuna Ai",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,

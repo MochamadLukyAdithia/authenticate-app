@@ -91,108 +91,108 @@ class _BelajarScreenState extends State<BelajarScreen> {
         ));
   }
 
-  Stack ShowCatalog(DocumentSnapshot<Object?> Item, FavoriteProvider provider) {
-    return Stack(
-      children: [
-        Padding(
-          padding: EdgeInsets.all(15),
-          child: Container(
-            padding: EdgeInsets.all(10),
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.grey.shade200,
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: 100,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                        Item['image'],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      Item['name'],
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Iconsax.flash_1,
-                          size: 16,
-                          color: Colors.grey,
-                        ),
-                        Text(
-                          "${Item['Cal']} Lesson",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(
-                          Iconsax.clock,
-                          size: 16,
-                          color: Colors.grey,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "${Item['time']}",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-        Positioned(
-          top: 15,
-          bottom: 15,
-          right: 40,
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                provider.togglerFavorite(Item);
-              });
-            },
-            child: Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.tealAccent.shade700,
-              size: 30,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
+  // Stack ShowCatalog(DocumentSnapshot<Object?> Item, FavoriteProvider provider) {
+  //   return Stack(
+  //     children: [
+  //       Padding(
+  //         padding: EdgeInsets.all(15),
+  //         child: Container(
+  //           padding: EdgeInsets.all(10),
+  //           width: double.infinity,
+  //           decoration: BoxDecoration(
+  //             borderRadius: BorderRadius.circular(20),
+  //             color: Colors.grey.shade200,
+  //           ),
+  //           child: Row(
+  //             children: [
+  //               Container(
+  //                 width: 100,
+  //                 height: 80,
+  //                 decoration: BoxDecoration(
+  //                   color: Colors.white,
+  //                   borderRadius: BorderRadius.circular(20),
+  //                   image: DecorationImage(
+  //                     fit: BoxFit.cover,
+  //                     image: NetworkImage(
+  //                       Item['image'],
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ),
+  //               SizedBox(
+  //                 width: 10,
+  //               ),
+  //               Column(
+  //                 crossAxisAlignment: CrossAxisAlignment.start,
+  //                 children: [
+  //                   Text(
+  //                     Item['name'],
+  //                     style:
+  //                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+  //                   ),
+  //                   SizedBox(
+  //                     height: 5,
+  //                   ),
+  //                   Row(
+  //                     children: [
+  //                       Icon(
+  //                         Iconsax.flash_1,
+  //                         size: 16,
+  //                         color: Colors.grey,
+  //                       ),
+  //                       Text(
+  //                         "${Item['Cal']} Lesson",
+  //                         style: TextStyle(
+  //                           fontSize: 14,
+  //                           fontWeight: FontWeight.bold,
+  //                           color: Colors.grey,
+  //                         ),
+  //                       ),
+  //                       SizedBox(
+  //                         width: 10,
+  //                       ),
+  //                       Icon(
+  //                         Iconsax.clock,
+  //                         size: 16,
+  //                         color: Colors.grey,
+  //                       ),
+  //                       SizedBox(
+  //                         width: 10,
+  //                       ),
+  //                       Text(
+  //                         "${Item['time']}",
+  //                         style: TextStyle(
+  //                           fontSize: 14,
+  //                           fontWeight: FontWeight.bold,
+  //                           color: Colors.grey,
+  //                         ),
+  //                       ),
+  //                     ],
+  //                   ),
+  //                 ],
+  //               )
+  //             ],
+  //           ),
+  //         ),
+  //       ),
+  //       Positioned(
+  //         top: 15,
+  //         bottom: 15,
+  //         right: 40,
+  //         child: GestureDetector(
+  //           onTap: () {
+  //             setState(() {
+  //               provider.togglerFavorite(Item);
+  //             });
+  //           },
+  //           child: Icon(
+  //             Icons.arrow_forward_ios,
+  //             color: Colors.tealAccent.shade700,
+  //             size: 30,
+  //           ),
+  //         ),
+  //       ),
+  //     ],
+  //   );
+  // }
 }

@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:tuna_asis/pages/belajar/widgets/materi_detail.dart';
+// import 'package:iconsax/iconsax.dart';
+// import 'package:tuna_asis/pages/belajar/widgets/materi_detail.dart';
 import 'package:tuna_asis/pages/belajar/widgets/part_of_clasification.dart';
-import 'package:tuna_asis/providers/favorite_provider.dart';
+// import 'package:tuna_asis/providers/favorite_provider.dart';
 
 class Klasifikasi extends StatelessWidget {
   final DocumentSnapshot<Object?> documentSnapshot;
@@ -54,7 +54,7 @@ class Klasifikasi extends StatelessWidget {
                   height: 5,
                 ),
               ],
-            )
+            ),
           ],
         ),
         Positioned(

@@ -205,9 +205,12 @@ class _HomeScreenState extends State<HomeScreen> {
         Padding(
           padding: const EdgeInsets.only(top: 24),
           child: const Text(
-            "Ada yang bisa kami\nbantu Tania?",
-            style:
-                TextStyle(fontWeight: FontWeight.bold, fontSize: 32, height: 1),
+            "Selamat Belajar\nTania ❤",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 32,
+              height: 1,
+            ),
           ),
         ),
         const Spacer(),
